@@ -14,16 +14,18 @@ export default function Card({
   large?: boolean;
 }) {
   return (
+    
     <div
-      className={`relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${
+      className={`mt-6 relative flex flex-col justify-evenly col-span-1 h- overflow-hidden rounded-xl border border-gray-200 bg-white shadow-md ${
         large ? "md:col-span-2" : ""
       }`}
     >
-      <div className="flex h-60 items-center justify-center">{demo}</div>
-      <div className="mx-auto max-w-md text-center">
-        <h2 className="bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent md:text-3xl md:font-normal">
+       <h2 className="bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent md:text-3xl md:font-normal text-center p-2">
           <Balancer>{title}</Balancer>
         </h2>
+      <div className="flex h-48 flex-col items-center justify-center text-2xl">{demo}</div>
+      <div className="mx-auto max-w-md text-center">
+       
         <div className="prose-sm -mt-2 leading-normal text-gray-500 md:prose">
           <Balancer>
             <ReactMarkdown
