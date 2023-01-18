@@ -39,29 +39,15 @@ export default function Layout({
         <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between xl:mx-auto">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
-              src="/logo.png"
+              src="/house.png"
               alt="Logo image of a chat bubble"
               width="30"
               height="30"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>Precedent</p>
+            <p>EtherScalp</p>
           </Link>
-          <div>
-            <AnimatePresence>
-              {!session && status !== "loading" ? (
-                <motion.button
-                  className="rounded-full border border-black bg-black p-1.5 px-4 text-sm text-white transition-all hover:bg-white hover:text-black"
-                  onClick={() => setShowSignInModal(true)}
-                  {...FADE_IN_ANIMATION_SETTINGS}
-                >
-                  Sign In
-                </motion.button>
-              ) : (
-                <UserDropdown />
-              )}
-            </AnimatePresence>
-          </div>
+          <div></div>
         </div>
       </div>
       <main className="flex w-full flex-col items-center justify-center py-32">
@@ -69,7 +55,7 @@ export default function Layout({
       </main>
       <div className="absolute w-full border-t border-gray-200 bg-white py-5 text-center">
         <p className="text-gray-500">
-          A free template by{" "}
+          Initial template by{" "}
           <a
             className="font-medium text-gray-800 underline transition-colors"
             href="https://twitter.com/steventey"
@@ -77,6 +63,17 @@ export default function Layout({
             rel="noopener noreferrer"
           >
             Steven Tey
+          </a>
+        </p>
+        <p className="text-gray-500">
+          EtherScalp by
+          <a
+            className="mx-1 font-medium text-gray-800 underline transition-colors"
+            href="https://github.com/DavSab"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            David Sabri
           </a>
         </p>
       </div>
